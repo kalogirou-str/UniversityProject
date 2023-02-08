@@ -1,0 +1,21 @@
+﻿<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Course Title</th>
+            <th>Student Name</th>
+            <th>Student Surname</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var grade in Model)
+        {
+            <tr>
+                <td>@grade.CourseTitle</td>
+                <td>@grade.StudentName</td>
+                <td>@grade.StudentSurname</td>
+                <td>@grade.Grade</td>
+            </tr>
+        }
+    </tbody>
+</table>

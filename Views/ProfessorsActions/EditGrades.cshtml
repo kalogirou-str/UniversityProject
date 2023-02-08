@@ -1,0 +1,36 @@
+﻿<form method="post" action="EditChanges">
+    <table class="table table-striped table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th>Course Title</th>
+                <th>Semester</th>
+                <th>Student Name</th>
+                <th>Student Surname</th>
+                <th>Student Registration Number</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var course in Model)
+            {
+                <input type="hidden" name="Id" value="@course.Id" />
+                @foreach (var student in course.Students)
+                {
+                    <tr>
+                        <td>@course.CourseTitle</td>
+                        <td>@course.Semester</td>
+                        <td>@student.StudentName</td>
+                        <td>@student.StudentSurname</td>
+                        <td>@student.StudentRegistrationNumber</td>
+                        <td>
+                            <input class="form-control" type="number" min="0" max="10" name="Grade_@student.StudentRegistrationNumber" value="@student.Grade" />
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Save Changes" />
+    </div>
+</form>

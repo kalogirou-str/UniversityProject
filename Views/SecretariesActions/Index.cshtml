@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "University Administration";
+}
+
+<h1>University Administration</h1>
+
+<div>
+    <p>Welcome to the University Administration page.</p>
+    <p>Please select one of the following options to continue:</p>
+    <ul>
+        <li><a asp-controller="SecretariesActions" asp-action="RegisterCourse">Register a new course</a></li>
+        <li><a asp-controller="SecretariesActions" asp-action="RegisterStudent">Register a new student</a></li>
+        <li><a asp-controller="SecretariesActions" asp-action="RegisterProfessor">Register a new professor</a></li>
+        <li><a asp-controller="SecretariesActions" asp-action="Assign">Assign a course to a Professor</a></li>
+        <li><a asp-controller="SecretariesActions" asp-action="Declare">Declare a course to a Student</a></li>
+    </ul>
+</div>

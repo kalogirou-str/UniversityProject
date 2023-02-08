@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Student Dashboard";
+}
+
+<h1>Welcome, @Model!</h1>
+
+<nav>
+    <ul>
+        <li><a asp-action="ViewGradesByCourse">View Grades by Course</a></li>
+        <li><a asp-action="ViewGradesBySemester">View Grades by Semester</a></li>
+        <li><a asp-action="ViewTotalScore">View Total Score</a></li>
+    </ul>
+</nav>

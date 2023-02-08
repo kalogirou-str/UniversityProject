@@ -1,0 +1,34 @@
+﻿@model List<GradeViewModel>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Course Title</th>
+            <th>Semester</th>
+            <th>Student Name</th>
+            <th>Student Surname</th>
+            <th>Student Registration Number</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var viewModel in Model)
+        {
+            <tr>
+                <td>@viewModel.CourseTitle</td>
+                <td>@viewModel.Semester</td>
+                @foreach (var grade in viewModel.Grades)
+                {
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>@grade.StudentName</td>
+                    <td>@grade.StudentSurname</td>
+                    <td>@grade.StudentRegistrationNumber</td>
+                    <td>@grade.Grade</td>
+                </tr>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
